@@ -1,7 +1,7 @@
 window.addEventListener("DOMContentLoaded", function() {
     const lab_7 = document.querySelector(".lab-7");
 
-    fetch("http://lab.vntu.org/api-server/lab7.php")
+    fetch("https://lab.vntu.org/api-server/lab7.php")
     .then(response => response.json())
     .then(data => {
         data.forEach(item => {
