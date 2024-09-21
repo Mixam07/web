@@ -1,0 +1,20 @@
+{
+  "name": "web-6",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon src/index.js /Users/admin/mongodb/bin/mongod.exe --dbpath=/Users/admin/mongodb-data",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mongodb": "/Users/admin/mongodb/bin/mongod.exe --dbpath=/Users/admin/mongodb-data",
+    "dev": "nodemon src/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.0",
+    "hbs": "^4.2.0",
+    "mongoose": "^8.6.3",
+    "path": "^0.12.7"
+  }
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h3>Лабораторна 7</h>
+        <table class="lab-7" border="1">
+            <tr>
+                <th>Name</th>
+                <th>Affiliation</th>
+                <th>Rank</th>
+                <th>Location</th>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h3>Лабораторна 8</h>
+            {{#each data}}
+                <table border="1">
+                <tr>
+                    <tr>
+                        <th>Name</th>
+                        <th>Affiliation</th>
+                        <th>Rank</th>
+                        <th>Location</th>
+                    </tr>
+                </tr>
+                <tr>
+                {{#each this}}
+                    <tr>
+                        <td>{{this.name}}</td>
+                        <td>{{this.affiliation}}</td>
+                        <td>{{this.rank}}</td>
+                        <td>{{this.location}}</td>
+                    </tr>
+                {{/each}}
+                </tr>
+            {{/each}}
+        </table>
+        </table>
+    </div>
+    <script src="/scripts/table.js"></script>
+</body>
+</html>
