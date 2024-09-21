@@ -50,15 +50,14 @@ app.get("/login", (req, res) => {
 
 app.get("/table", async (req, res) => {
     try{
-        const response = await fetch('http://lab.vntu.org/api-server/lab8.php?user=student&pass=p@ssw0rd');
+        const response = await fetch('https://lab.vntu.org/api-server/lab8.php?user=student&pass=p@ssw0rd');
         const data = await response.json();
 
         res.render("table", { data });
     }catch(e) {
+        console.log(e)
         res.render("table", { })
     }
-
-    res.render("table", { data })
 })
 
 app.get("/khmilnyk", (req, res) => {
