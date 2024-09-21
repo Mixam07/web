@@ -49,8 +49,14 @@ app.get("/login", (req, res) => {
 })
 
 app.get("/table", async (req, res) => {
-    const response = await fetch('http://lab.vntu.org/api-server/lab8.php?user=student&pass=p@ssw0rd');
-    const data = await response.json();
+    try{
+        const response = await fetch('http://lab.vntu.org/api-server/lab8.php?user=student&pass=p@ssw0rd');
+        const data = await response.json();
+
+        res.render("table", { data });
+    }catch(e) {
+        res.render("table", { })
+    }
 
     res.render("table", { data })
 })
